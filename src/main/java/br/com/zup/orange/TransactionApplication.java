@@ -3,7 +3,7 @@ package br.com.zup.orange;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import br.com.zup.orange.transaction.TransactionListener;
+import br.com.zup.orange.kafka.TransactionListener;
 
 @SpringBootApplication
 public class TransactionApplication {

@@ -1,4 +1,4 @@
-package br.com.zup.orange.transaction;
+package br.com.zup.orange.kafka;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,6 +13,7 @@ import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 
+
 @Configuration
 public class KafkaConfiguration {
 
@@ -23,16 +24,16 @@ public class KafkaConfiguration {
 	}
 	
 	@Bean
-	public ConsumerFactory<String, TransactionMessage> transactionConsumerFactory() {
+	public ConsumerFactory<String, TransactionRequest> transactionConsumerFactory() {
 	    StringDeserializer stringDeserializer = new StringDeserializer();
-	    JsonDeserializer<TransactionMessage> jsonDeserializer = new JsonDeserializer<>(TransactionMessage.class, false);
+	    JsonDeserializer<TransactionRequest> jsonDeserializer = new JsonDeserializer<>(TransactionRequest.class, false);
 
 	    return new DefaultKafkaConsumerFactory<>(consumerConfigurations(), stringDeserializer, jsonDeserializer);
 	}
 	
 	@Bean
-	public ConcurrentKafkaListenerContainerFactory<String, TransactionMessage> kafkaListenerContainerFactory() {
-	    ConcurrentKafkaListenerContainerFactory<String, TransactionMessage> factory = new ConcurrentKafkaListenerContainerFactory<>();
+	public ConcurrentKafkaListenerContainerFactory<String, TransactionRequest> kafkaListenerContainerFactory() {
+	    ConcurrentKafkaListenerContainerFactory<String, TransactionRequest> factory = new ConcurrentKafkaListenerContainerFactory<>();
 	    factory.setConsumerFactory(transactionConsumerFactory());
 
 	    return factory;
