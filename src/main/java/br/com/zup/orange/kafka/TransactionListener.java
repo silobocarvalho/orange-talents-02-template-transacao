@@ -5,6 +5,7 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 import br.com.zup.orange.transaction.TransactionRepository;
+import br.com.zup.orange.transaction.TransactionRequest;
 
 @Component
 public class TransactionListener {

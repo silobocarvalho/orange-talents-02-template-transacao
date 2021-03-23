@@ -1,4 +1,4 @@
-package br.com.zup.orange.kafka;
+package br.com.zup.orange.transaction;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

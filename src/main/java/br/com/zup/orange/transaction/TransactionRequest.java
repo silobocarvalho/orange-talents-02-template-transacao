@@ -1,4 +1,4 @@
-package br.com.zup.orange.kafka;
+package br.com.zup.orange.transaction;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;

@@ -9,8 +9,6 @@ import javax.validation.constraints.NotEmpty;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import br.com.zup.orange.kafka.TransactionRequest;
-
 
 public interface TransactionRepository extends JpaRepository<TransactionRequest, String> {
 

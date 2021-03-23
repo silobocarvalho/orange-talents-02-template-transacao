@@ -13,6 +13,8 @@ import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.serializer.JsonDeserializer;
 
+import br.com.zup.orange.transaction.TransactionRequest;
+
 
 @Configuration
 public class KafkaConfiguration {
